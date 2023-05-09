@@ -2,24 +2,6 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-    <title>FitCare</title>
-<!--
-
-
-
--->
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/templatemo-training-studio.css">
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,7 +42,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    FitCare
+                    Financial Fitness
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -70,11 +52,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item "><a href="/" class="nav-link {{request()->is('/') ? 'active' : ''}}">Home</a></li>
-                        <li class="nav-item "><a href="#our-classes" class="nav-link {{request()->is('classes') ? 'active' : ''}}">Classes</a></li>
-                        <li class="nav-item "><a href="#features" class="nav-link {{request()->is('about') ? 'active' : ''}}">About</a></li>
-                        <li class="nav-item "><a href="#contact-us" class="nav-link {{request()->is('contact') ? 'active' : ''}}">Contact</a></li>
-                        
-                        
+                        <li class="nav-item "><a href="#" class="nav-link {{request()->is('about') ? 'active' : ''}}">About</a></li>
+                        <li class="nav-item "><a href="#" class="nav-link {{request()->is('contact') ? 'active' : ''}}">Contact</a></li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,6 +62,9 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('bills.create') }}">Finance Alerts</a>
                                 <a class="dropdown-item" href="{{ route('create.index') }}">Expense Tracking</a>
+                                <a class="dropdown-item" href="/financial-analysis">Financial Analysis</a>
+                                <a class="dropdown-item" href="/financial-goals">Financial Goals</a>
+                                <a class="dropdown-item" href="/finance-reminder-customization">Finance Reminder Customization</a>
                             </div>
                         </li>
                         

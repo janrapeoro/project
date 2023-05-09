@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap');
 body{
-    background-color: #89B6FA ;
-    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #232d39;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 h1,h2,h3,h4,h5,h6{
    font-family: 'Playfair Display', serif;
+   margin-top: 0px;
+   margin-bottom: 0px;
 }
 
 .navbar-brand{
     font-family: 'Playfair Display', serif;
-    color: #285430;
+   
+    font-size: 30px;
 }
 .navbar-nav .active{
-    border-bottom: black solid 3px;
+  
 }
 .hero-section{
     background: url("../img/1.jpg") no-repeat;
