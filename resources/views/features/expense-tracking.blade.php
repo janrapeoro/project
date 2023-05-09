@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container">
-        <h1>Goals</h1>
-        <p>This is the Goals feature page</p>
-    </div>
+        <h1>Expense Tracking</h1>
+
 @endsection

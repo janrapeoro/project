@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FinanceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,30 +23,54 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 // routes/web.php
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('alerts', AlertController::class);
+});
+
 Route::middleware(['auth'])->group(function () {
-    Route::get('/finance-alerts', function () {
-        return view('finance-alerts');
-    })->name('finance-alerts');
-
-    Route::post('/notifications', [\App\Http\Controllers\NotificationController::class, 'store'])
-        ->name('notifications.store');
+    Route::get('/bills/create', function () {
+        return view('create.bills');
+    })->name('bills.create');
+    
+    Route::post('/bills/store', [FinanceController::class, 'store'])->name('bills.store');
 });
 
 
-Route::get('/expense-tracking', function () {
-    return view('expense-tracking');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/create', [FinanceController::class, 'index'])->name('create.index');
+
 });
 
-Route::get('/financial-analysis', function () {
-    return view('financial-analysis');
-});
 
-Route::get('/financial-goals', function () {
-    return view('financial-goals');
-});
 
-Route::get('/finance-reminder-customization', function () {
-    return view('finance-reminder-customization');
-});
+
+// Route::get('/bills/create', [FinanceController::class, 'create'])->name('bills.create');
+// Route::resource('create', FinanceController::class);
+
+Route::get('/finance/{finance}', [FinanceController::class, 'show'])->name('finance.show');
+Route::delete('/finance/{finance}', [FinanceController::class, 'destroy'])->name('finance.destroy');
+Route::get('/finance/edit/{finance}', [FinanceController::class, 'edit'])->name('finance.edit');
+Route::put('/finance/update/{finance}', [FinanceController::class, 'update'])->name('finance.update');
+
+
+
+
+// Route::get('/expense-tracking', function () {
+//     return view('features.expense-tracking');
+// });
+
+// Route::get('/financial-analysis', function () {
+//     return view('features.financial-analysis');
+// });
+
+// Route::get('/financial-goals', function () {
+//     return view('features.financial-goals');
+// });
+
+// Route::get('/finance-reminder-customization', function () {
+//     return view('features.finance-reminder-customization');
+// });
+
 
 

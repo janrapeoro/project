@@ -59,8 +59,8 @@
                                 Features
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('bills.create') }}">Finance Alerts</a>
-                                <a class="dropdown-item" href="{{ route('create.index') }}">Expense Tracking</a>
+                                <a class="dropdown-item" href="finance">Finance Alerts</a>
+                                <a class="dropdown-item" href="/expense-tracking">Expense Tracking</a>
                                 <a class="dropdown-item" href="/financial-analysis">Financial Analysis</a>
                                 <a class="dropdown-item" href="/financial-goals">Financial Goals</a>
                                 <a class="dropdown-item" href="/finance-reminder-customization">Finance Reminder Customization</a>

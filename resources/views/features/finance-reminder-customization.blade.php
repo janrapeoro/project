@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Analysis</h1>
-        <p>This is the Finance Analysis feature page</p>
+        <h1>Finance Reminder Customization</h1>
+     
     </div>
 @endsection
