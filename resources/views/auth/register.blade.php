@@ -1,6 +1,57 @@
-@extends('layouts.app')
+@extends('layouts.aps')
 
 @section('content')
+<style>
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: none;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .card-body {
+        background-color: #f8f9fa;
+        border-top: none;
+    }
+
+    .form-control {
+        border-radius: 0;
+    }
+
+    .form-check-input {
+        margin-top: 5px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        border-radius: 0;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+    }
+
+    .btn-link {
+        color: #007bff;
+    }
+
+    .btn-link:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+   .card{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+   }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

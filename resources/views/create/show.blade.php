@@ -1,47 +1,46 @@
-@extends('layouts.app')
+@extends('layouts.aps')
 
 @section('content')
 
-<div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
-            <h2> Show Bills</h2>
-        </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('create.index') }}"> Back</a>
-        </div>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-12 mb-4">
+      <h2 class="text-center">Your Bill</h2>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Bills:</strong>
-            {{ $finance->bills }}
-        </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <h5 class="card-title mb-3"><strong>Bills:</strong></h5>
+        <p class="card-text">{{ $finance->bills }}</p>
+      </div>
     </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Amount:</strong>
-            {{ $finance->amount }}
-        </div>
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <h5 class="card-title mb-3"><strong>Amount:</strong></h5>
+        <p class="card-text">{{ $finance->amount }}</p>
+      </div>
     </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Date:</strong>
-            {{ $finance->date }}
-        </div>
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <h5 class="card-title mb-3"><strong>Date:</strong></h5>
+        <p class="card-text">{{ $finance->date }}</p>
+      </div>
     </div>
-
-
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Details:</strong>
-            {{ $finance->detail }}
-        </div>
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <h5 class="card-title mb-3"><strong>Details:</strong></h5>
+        <p class="card-text">{{ $finance->detail }}</p>
+      </div>
     </div>
+  </div>
+  
+  <div class="row mt-4">
+    <div class="col-md-12 text-center">
+      <a class="btn btn-primary" href="{{ route('create.index') }}">Back</a>
+    </div>
+  </div>
 </div>
 
 

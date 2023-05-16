@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <title>FitCare</title>
+    <title>MoneyFit</title>
 <!--
 
 
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-    <link rel="stylesheet" href="assets/css/templatemo-training-studio.css">
+    <link rel="stylesheet" href="assets/css/moneyfit.css">
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>MoneyFit</title>
 
 
      <!-- Bootstrap CSS -->
@@ -54,13 +54,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style3.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    FitCare
+                   MoneyFit
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -70,9 +71,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item "><a href="/" class="nav-link {{request()->is('/') ? 'active' : ''}}">Home</a></li>
-                        <li class="nav-item "><a href="#our-classes" class="nav-link {{request()->is('classes') ? 'active' : ''}}">Classes</a></li>
-                        <li class="nav-item "><a href="#features" class="nav-link {{request()->is('about') ? 'active' : ''}}">About</a></li>
-                        <li class="nav-item "><a href="#contact-us" class="nav-link {{request()->is('contact') ? 'active' : ''}}">Contact</a></li>
+                        <li class="nav-item "><a href="#about" class="nav-link {{request()->is('about') ? 'active' : ''}}">Tips</a></li>
+                        <li class="nav-item "><a href="#strat" class="nav-link {{request()->is('classes') ? 'active' : ''}}">Strategy</a></li>
+                      
+                        <li class="nav-item "><a href="#developer" class="nav-link {{request()->is('contact') ? 'active' : ''}}">Contact</a></li>
                         
                         
 
@@ -81,7 +83,7 @@
                                 Features
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('bills.create') }}">Finance Alerts</a>
+                                <a class="dropdown-item" href="{{ route('bills.create') }}">Bills</a>
                                 <a class="dropdown-item" href="{{ route('create.index') }}">Expense Tracking</a>
                             </div>
                         </li>

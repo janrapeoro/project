@@ -107,8 +107,9 @@ class FinanceController extends Controller
     public function destroy(Finance $finance)
     {
         $finance->delete();
-
+    
         return redirect()->route('create.index')
-                        ->with('success','Bills deleted successfully');
+                         ->with('success', 'Bill deleted successfully');
     }
+    
 }
